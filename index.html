@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101c2b">
+  <title>JAHONGIR RPG | Fantasy World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <div id="hud">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-icon">⚔</span>
+          <div>
+            <h1>JAHONGIR RPG</h1>
+            <p>LOW-POLY FANTASY WORLD</p>
+          </div>
+        </div>
+        <button id="soundBtn" class="small-btn" aria-label="Ovoz">🔊</button>
+      </header>
+
+      <section class="player-card">
+        <div class="player-heading">
+          <div class="avatar">⚔️</div>
+          <div class="player-info">
+            <strong>BOYMURODOV JAHONGIR</strong>
+            <span>Qilichboz · <span id="level">1</span>-daraja</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="stat-label"><span>❤️ Sog‘liq</span><span id="hpText">100 / 100</span></div>
+          <div class="bar"><div id="hpBar" class="bar-fill health"></div></div>
+        </div>
+        <div class="stat">
+          <div class="stat-label"><span>✨ Tajriba</span><span id="xpText">0 / 100</span></div>
+          <div class="bar"><div id="xpBar" class="bar-fill experience"></div></div>
+        </div>
+        <div class="stats-row">
+          <div>☠️ Mag‘lubiyat <b id="kills">0</b></div>
+          <div>🪙 Oltin <b id="gold">0</b></div>
+        </div>
+      </section>
+
+      <div class="quest-card">
+        <span class="quest-icon">📜</span>
+        <div>
+          <strong>ASOSIY VAZIFA</strong>
+          <p>O‘rmondagi dushmanlarni mag‘lub et!</p>
+          <small id="questProgress">Mag‘lub etilganlar: 0 / 5</small>
+        </div>
+      </div>
+
+      <div id="message" role="status">Sarguzashtga xush kelibsiz!</div>
+      <div class="crosshair">+</div>
+
+      <div id="startScreen" class="overlay">
+        <div class="start-panel">
+          <div class="crest">⚔️</div>
+          <p class="eyebrow">FANTASY ADVENTURE</p>
+          <h2>JAHONGIR<br><span>RPG</span></h2>
+          <p class="intro">Sehrli orolga sayohat boshlanmoqda. Qilichingizni oling va dushmanlarga qarshi kurashing!</p>
+          <button id="startBtn" class="primary-btn">▶ O‘YINNI BOSHLASH</button>
+          <p class="hint">Kompyuter va telefon uchun</p>
+        </div>
+      </div>
+
+      <div id="gameOver" class="overlay hidden">
+        <div class="start-panel">
+          <div class="crest">🛡️</div>
+          <h2 id="endTitle">SARGUZASHT TUGADI</h2>
+          <p id="endText" class="intro">Qayta urinib ko‘ring!</p>
+          <button id="restartBtn" class="primary-btn">↻ QAYTA BOSHLASH</button>
+        </div>
+      </div>
+
+      <div class="desktop-help">
+        <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Harakat</span>
+        <span><kbd>SPACE</kbd> Hujum</span>
+        <span>Sichqoncha: kamerani aylantirish</span>
+      </div>
+
+      <div id="mobileControls">
+        <div id="joystick" aria-label="Harakat joystigi">
+          <div id="stick"></div>
+        </div>
+        <button id="attackBtn" aria-label="Qilich bilan hujum">⚔️<span>HUJUM</span></button>
+      </div>
+
+      <div id="toast"></div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
